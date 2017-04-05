@@ -1,9 +1,9 @@
 
 Name: app-syncthing-plugin
 Epoch: 1
-Version: 1.0.0
+Version: 1.0.1
 Release: 1%{dist}
-Summary: Syncthing Administrators - Core
+Summary: Syncthing User - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Packager: eGloo
@@ -12,15 +12,15 @@ Source: app-syncthing-plugin-%{version}.tar.gz
 Buildarch: noarch
 
 %description
-Syncthing Administrators provides access control to the file sync app.
+Syncthing User provides access control to the file sync app.
 
 %package core
-Summary: Syncthing Administrators - Core
+Summary: Syncthing User - Core
 Requires: app-base-core
 Requires: app-accounts-core
 
 %description core
-Syncthing Administrators provides access control to the file sync app.
+Syncthing User provides access control to the file sync app.
 
 This package provides the core API and libraries.
 
@@ -56,6 +56,7 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/syncthing_plugin/packaging
+%exclude /usr/clearos/apps/syncthing_plugin/unify.json
 %dir /usr/clearos/apps/syncthing_plugin
 /usr/clearos/apps/syncthing_plugin/deploy
 /usr/clearos/apps/syncthing_plugin/language
